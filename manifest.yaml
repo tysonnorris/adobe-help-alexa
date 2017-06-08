@@ -5,5 +5,5 @@ package:
   actions:
     adobe-analytics-skill:
       version: 1.0
-      location: exercises/exercise-1/alexa-skill.js
+      location: action/alexa-skill.js
       runtime: nodejs@6
