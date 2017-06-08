@@ -36,7 +36,11 @@ var newSessionHandlers = {
         this.emit(':tell', "Welcome to Adobe Help.");
     }
 };
-
+var myHandlers = {
+    'hello': function () {
+         this.emit(':ask', "I'm doing fine, how about yourself ?"); 
+    }
+}
 var main = function (event) {
     console.log('ALEXA Event', event.request.type + '!');
 
@@ -50,7 +54,7 @@ var main = function (event) {
                     });
                 alexaSDK.APP_ID = APP_ID;
                 alexaSDK.resources = languageStrings;
-                alexaSDK.registerHandlers(newSessionHandlers);
+                alexaSDK.registerHandlers(newSessionHandlers,myHandlers);
                 return alexaSDK.execute();
             } catch (err) {
                 console.log(err);
