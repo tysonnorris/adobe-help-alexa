@@ -1,0 +1,9 @@
+package:
+  name: alexa-skill
+  version: 1.0
+  license: Apache-2.0
+  actions:
+    adobe-analytics-skill:
+      version: 1.0
+      location: exercises/exercise-1/alexa-skill.js
+      runtime: nodejs@6
